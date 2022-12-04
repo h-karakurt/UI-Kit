@@ -1,0 +1,592 @@
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+input:focus {
+	outline: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+section{
+    border-bottom: 1px solid black;
+    padding: 50px;
+}
+
+/*section 1*/
+
+section.section1 .container{
+    border: 3px solid #0692BC;
+    padding: 10px 50px;
+    border-radius: 30px;
+    width: fit-content;
+    position: relative;
+    cursor: pointer;
+}
+
+section.section1 .container a{
+    color: #0692BC;
+    transition: 0.3s;
+}
+
+section.section1 .container::before{
+    content: '';
+    background-color: #0692BC;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    margin-right: 9px;
+    transition: 0.3s;
+    position: absolute;
+    top: 0;
+    left: -1px;
+    z-index: -1;
+}
+
+section.section1 .container:hover::before{
+    content: '';
+    background-color: #0692BC;
+    width: 198px;
+    height: 40px;
+    border-radius: 50px;
+    transition: 0.3s;
+    position: absolute;
+    top: 0;
+    left: -1px;
+}
+
+section.section1 .container:hover a{
+    color: white;
+    transition: 0.3s;
+}
+
+/*----------------------------------------------------------------*/
+/*section 2*/
+/*----------------------------------------------------------------*/
+
+section.section2 .container{
+    position: relative;
+    width: 100px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+section.section2 .container input {
+	border: 2px solid #0692BC;
+	padding: 7px 32px 9px;
+	transition: 0.4s;
+    width: 100%;
+    border-radius: 2px;
+}
+
+section.section2 .container input::placeholder{
+    color: #0692BC;
+}
+
+section.section2 .container i.fa-solid{
+	position: absolute;
+    left: 10px;
+    top: 9px;
+    color: #0692BC;
+}
+
+section.section2 .container:focus-within{
+	width: 260px;
+    transition: 0.3s;
+}
+
+section.section2 .container input~.focusable:before,
+section.section2 .container input~.focusable:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 3px;
+	background-color: #0692BC;
+	transition: 0.2s;
+	transition-delay: 0.2s;
+}
+ 
+section.section2 .container input~.focusable:after {
+	top: auto;
+	bottom: 0;
+	right: auto;
+	left: 0;
+	transition-delay: 0.6s;
+}
+ 
+section.section2 .container input~.focusable i:before,
+section.section2 .container input~.focusable i:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 3px;
+	height: 0;
+	background-color: #0692BC;
+	transition: 0.2s;
+}
+ 
+section.section2 .container input~.focusable i:after {
+	left: auto;
+	right: 0;
+	top: auto;
+	bottom: 0;
+	transition-delay: 0.4s;
+}
+ 
+section.section2 input:focus~.focusable:before,
+section.section2 input:focus~.focusable:after {
+	width: 100%;
+	transition: 0.2s;
+	transition-delay: 0.6s;
+}
+ 
+section.section2 input:focus~.focusable:after {
+	transition-delay: 0.2s;
+}
+ 
+section.section2 input:focus~.focusable i:before,
+section.section2 input:focus~.focusable i:after {
+	height: 100%;
+	transition: 0.2s;
+}
+
+section.section2 input:focus~.focusable i:after {
+	transition-delay: 0.4s;
+}
+
+/*----------------------------------------------------------------*/
+/*section 3*/
+/*----------------------------------------------------------------*/
+
+section.section3 .container{
+    position: relative;
+    width: 240px;
+    margin-bottom: 20px;
+}
+
+section.section3 .container input {
+	border: 2px solid #0692BC;
+	padding: 7px 32px 9px;
+	transition: 0.4s;
+    width: 100%;
+    border-radius: 2px;
+}
+
+section.section3 .container input::placeholder{
+    color: #0692BC;
+}
+
+section.section3 .container i.fa-solid{
+	position: absolute;
+    left: 10px;
+    top: 8px;
+    color: #0692BC;
+}
+
+section.section3 .container input~.focusable:before,
+section.section3 .container input~.focusable:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 3px;
+	background-color: #0692BC;
+	transition: 0.2s;
+	transition-delay: 0.2s;
+}
+ 
+section.section3 .container input~.focusable:after {
+	top: auto;
+	bottom: 0;
+	right: auto;
+	left: 0;
+	transition-delay: 0.6s;
+}
+ 
+section.section3 .container input~.focusable i:before,
+section.section3 .container input~.focusable i:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 3px;
+	height: 0;
+	background-color: #0692BC;
+	transition: 0.2s;
+}
+ 
+section.section3 .container input~.focusable i:after {
+	left: auto;
+	right: 0;
+	top: auto;
+	bottom: 0;
+	transition-delay: 0.4s;
+}
+ 
+section.section3 input:focus~.focusable:before,
+section.section3 input:focus~.focusable:after {
+	width: 100%;
+	transition: 0.2s;
+	transition-delay: 0.6s;
+}
+ 
+section.section3 input:focus~.focusable:after {
+	transition-delay: 0.2s;
+}
+ 
+section.section3 input:focus~.focusable i:before,
+section.section3 input:focus~.focusable i:after {
+	height: 100%;
+	transition: 0.2s;
+}
+
+section.section3 input:focus~.focusable i:after {
+	transition-delay: 0.4s;
+}
+
+/*----------------------------------------------------------------*/
+/*section 4*/
+/*----------------------------------------------------------------*/
+
+section.section4 .line{
+    width: 720px;
+    margin-left: 40px;
+    background-color: grey;
+    height: 3px;
+}
+
+section.section4 .steps{
+    height: 50px;
+    width: 800px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+section.section4 .steps .step-item{
+    height: 40px;
+    width: 80px;
+    background-color: #0692BC;
+    border-radius: 40px;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+section.section4 .steps .step-item .rotatable{
+    transition: 0.3s;
+}
+
+section.section4 .steps .step-item span{
+    color: white;
+    font-weight: bold;
+    line-height: 38px;
+    transition: 0.3s;
+}
+
+section.section4 .steps .step-item:focus{
+    width: 80px;
+    height: 80px;
+    border-radius: 0 50% 50% 50%;
+    transform: rotate(-135deg);
+    transition: 0.3s;
+}
+
+section.section4 .steps .step-item:focus span{
+    transition: 0.3s;
+    margin-left: 11px;
+    line-height: 65px;
+}
+
+section.section4 .steps .step-item:focus .rotatable{
+    transform: rotate(135deg);
+    transition: 0.3s;
+    margin-top: -30px;
+}
+
+/*----------------------------------------------------------------*/
+/*section 5*/
+/*----------------------------------------------------------------*/
+
+section.section5 .container{
+    width: 200px;
+    display: flex;
+}
+
+section.section5 .container div{
+    margin-right: 20px;
+}
+
+section.section5 .container div i{
+    border-radius: 100%;
+    transition: 0.2s;
+}
+
+section.section5 .container div i:hover{
+    margin: 0 !important;
+    padding: 6px 8px;
+    transition: 0.2s;
+}
+
+section.section5 .container div i.fa-instagram{
+    background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    padding: 0px 2px;
+    margin: 6px 6px;
+}
+
+section.section5 .container div i.fa-instagram:hover{
+    color: white;
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    padding: 6px 8px;
+}
+
+section.section5 .container div i.fa-facebook-f{
+    color: #4267B2;
+    background: white;
+    padding: 0px 2px;
+    margin: 6px 10px;
+}
+
+section.section5 .container div i.fa-facebook-f:hover{
+    color: white;
+    background: #4267B2;
+    padding: 6px 12px;
+}
+
+section.section5 .container div i.fa-twitter{
+    color: #1DA1F2;
+    background: white;
+    padding: 0px 2px;
+    margin: 8px 6px;
+}
+
+section.section5 .container div i.fa-twitter:hover{
+    color: white;
+    background: #1DA1F2;
+    padding: 8px 8px;
+}
+
+section.section5 .container div i.fa-pinterest-p{
+    color: #e60023;
+    background: white;
+    padding: 0px 2px;
+    margin: 6px 8px;
+}
+
+section.section5 .container div i.fa-pinterest-p:hover{
+    color: white;
+    background: #e60023;
+    padding: 6px 10px;
+}
+
+/*----------------------------------------------------------------*/
+/*section 6*/
+/*----------------------------------------------------------------*/
+
+section.section6 .container .form{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+section.section6 .container .form .box{
+    width: 14px;
+    height: 14px;
+    border: 2px solid #0C5576;
+    transform: rotate(45deg);
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+section.section6 .container .form span{
+    margin-left: 5px;    
+}
+
+section.section6 .container .form .box.checked{
+    background-color: #0C5576;
+    transform: rotate(0);
+    transition: 0.3s;
+}
+
+section.section6 .container .form .box.checked::before{
+    content: '\2713';
+    display: inline-block;
+    color: white;
+    transform: translate(-1px,-5px);
+}
+
+/*----------------------------------------------------------------*/
+/*section 7*/
+/*----------------------------------------------------------------*/
+
+section.section7 .container{
+    width: 240px;
+}
+
+section.section7 .container .month{
+    width: 100%;
+    height: 50px;
+    background-color: #D9DAE3;
+    border: 1px solid #707070;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+section.section7 .container .month i.right{
+   transform: rotate(90deg);
+}
+
+section.section7 .container .month i.left{
+    transform: rotate(-90deg);
+ }
+
+section.section7 .container .days-box{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+    margin-top: 10px;
+    border: 1px solid #898CA4;
+    padding: 6px;
+    border-radius: 20px;
+
+}
+
+section.section7 .container .days-box .day{
+    height: 21px;
+    width: 21px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-align: center;
+    border-radius: 100%;
+    padding: 1px 0px;
+}
+
+section.section7 .container .days-box .day.today{
+    background-color: #6EBE45;
+    color: white;
+}
+
+/*----------------------------------------------------------------*/
+/*section 8*/
+/*----------------------------------------------------------------*/
+
+section.section8 .container{
+    position: relative;
+    width: 200px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+section.section8 .container input {
+	border: 2px solid #0692BC;
+	padding: 7px 32px 9px;
+	transition: 0.4s;
+    width: 100%;
+    border-radius: 2px;
+}
+
+section.section8 .container input::placeholder{
+    color: #0692BC;
+}
+
+section.section8 .container i.fa-solid{
+	position: absolute;
+    left: 10px;
+    top: 9px;
+    color: #0692BC;
+}
+
+section.section8 .container input~.focusable:before,
+section.section8 .container input~.focusable:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 3px;
+	background-color: #0692BC;
+	transition: 0.2s;
+	transition-delay: 0.2s;
+}
+ 
+section.section8 .container input~.focusable:after {
+	top: auto;
+	bottom: 0;
+	right: auto;
+	left: 0;
+	transition-delay: 0.6s;
+}
+ 
+section.section8 .container input~.focusable i:before,
+section.section8 .container input~.focusable i:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 3px;
+	height: 0;
+	background-color: #0692BC;
+	transition: 0.2s;
+}
+ 
+section.section8 .container input~.focusable i:after {
+	left: auto;
+	right: 0;
+	top: auto;
+	bottom: 0;
+	transition-delay: 0.4s;
+}
+ 
+section.section8 input:focus~.focusable:before,
+section.section8 input:focus~.focusable:after {
+	width: 100%;
+	transition: 0.2s;
+	transition-delay: 0.6s;
+}
+ 
+section.section8 input:focus~.focusable:after {
+	transition-delay: 0.2s;
+}
+ 
+section.section8 input:focus~.focusable i:before,
+section.section8 input:focus~.focusable i:after {
+	height: 100%;
+	transition: 0.2s;
+}
+
+section.section8 input:focus~.focusable i:after {
+	transition-delay: 0.4s;
+}
+
+section.section8 a.button {
+    background-color:#0692BC;
+    color: white;
+    font-weight: bold;
+    padding: 10px 40px;
+    width: 200px;
+    display: block;
+    text-align: center;
+    border-radius: 50px;
+}
+
+
