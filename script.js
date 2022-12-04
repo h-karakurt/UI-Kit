@@ -24,8 +24,48 @@ const GetDate = () =>{
 
     const monthElement = document.querySelector('.section7 .container .month').getElementsByTagName("span");
     monthElement[0].innerHTML = month
-
-    console.log(monthElement)
 }
 
 GetDate()
+
+const SetActiveDiv = () =>{
+
+    const loginButton = document.querySelector('.section8 .first').getElementsByClassName("button");
+    const backButton = document.querySelector('.section8 .second').getElementsByClassName("button");
+
+    const element = document.querySelector('.section8').getElementsByClassName("page");
+    
+    loginButton[0].addEventListener('click' , function handleClick(){
+        element[0].classList.remove("active")
+        element[1].classList.add("active")
+    })
+
+    backButton[0].addEventListener('click' , function handleClick(){
+        element[0].classList.add("active")
+        element[1].classList.remove("active")
+    })
+    
+}
+
+SetActiveDiv()
+
+const OpenComboBox = () =>{
+
+    const button = document.querySelector('.section9 .container').getElementsByTagName("i");
+    
+    const element = document.querySelector('.section9').getElementsByClassName("combobox");
+
+    button[0].addEventListener('click' , function handleClick(){
+        if(element[0].classList.contains("hidden")){
+            element[0].classList.remove("hidden")
+        }
+        else{
+            element[0].classList.add("hidden")
+        }
+    })
+
+
+    console.log(element)
+}
+
+OpenComboBox()

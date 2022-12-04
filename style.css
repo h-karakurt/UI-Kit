@@ -490,12 +490,38 @@ section.section7 .container .days-box .day.today{
 /*section 8*/
 /*----------------------------------------------------------------*/
 
+section.section8{
+   height: 400px;
+}
+
 section.section8 .container{
     position: relative;
     width: 200px;
     margin-bottom: 20px;
     transition: 0.3s;
 }
+
+section.section8>div.second{
+    transform: translate(300px,-200px);
+    transition: 0.3s;
+}
+
+section.section8>div.second.active{
+    transform: translate(0,-200px);
+    transition: 0.3s;
+}
+
+section.section8>div.page{
+    opacity: 0;
+    width: 250px;
+    transition: 0.3s;
+}
+
+section.section8>div.page.active{
+    opacity: 1;
+    transition: 0.3s;
+}
+
 
 section.section8 .container input {
 	border: 2px solid #0692BC;
@@ -578,7 +604,7 @@ section.section8 input:focus~.focusable i:after {
 	transition-delay: 0.4s;
 }
 
-section.section8 a.button {
+section.section8 a.button-lg {
     background-color:#0692BC;
     color: white;
     font-weight: bold;
@@ -587,6 +613,79 @@ section.section8 a.button {
     display: block;
     text-align: center;
     border-radius: 50px;
+    cursor: pointer;
+}
+
+section.section8 a.button {
+    color: #0692BC;
+    text-decoration: underline;
+    margin-top: 30px;
+    width: 200px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
 }
 
 
+/*----------------------------------------------------------------*/
+/*section 9*/
+/*----------------------------------------------------------------*/
+
+section.section9{
+    padding-bottom: 100px;
+}
+
+section.section9 .container {
+    width: 300px;
+    height: 50px;
+    background-color: white;
+    border: 1px solid #0C5576;
+    border-radius: 30px;
+    padding: 0px 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 2;
+}
+
+section.section9 .container i{
+    transform: rotate(0deg);
+    transition: 0.2s;
+}
+
+section.section9 .hidden .container i{
+    transform: rotate(-90deg);
+    transition: 0.2s;
+}
+
+section.section9 .content {
+    width: 250px;
+    border: 1px solid #0C5576;
+    background-color: #151a4a05;
+    margin-left: 25px;
+    transition: 0.2s;
+    transform: translateY(50px);
+}
+
+section.section9 .hidden .content {
+    opacity: 0;
+    transition: 0.2s;
+    transform: translateY(-20px);
+}
+
+section.section9 .content ul{
+    list-style-type: none;   
+}
+
+section.section9 .content ul li{
+    padding: 2px 0px;
+    transition: 0.2s;
+}
+
+section.section9 .content ul li:hover{
+    font-weight: bold;
+    padding: 2px 5px;
+    transition: 0.2s;
+}
