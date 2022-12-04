@@ -261,10 +261,18 @@ section.section3 input:focus~.focusable i:after {
 /*----------------------------------------------------------------*/
 
 section.section4 .line{
-    width: 720px;
-    margin-left: 40px;
-    background-color: grey;
-    height: 3px;
+    width: 726px;
+    margin-left: 37px;
+    background-color: rgba(128, 128, 128, 0.21);
+    height: 6px;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.section4 .line .dots{
+    background-color: black;
+    width: 6px;
+    height: auto;
 }
 
 section.section4 .steps{
@@ -303,6 +311,7 @@ section.section4 .steps .step-item:focus{
     border-radius: 0 50% 50% 50%;
     transform: rotate(-135deg);
     transition: 0.3s;
+    background-color: #6EBE45;
 }
 
 section.section4 .steps .step-item:focus span{
@@ -653,6 +662,7 @@ section.section9 .container {
 section.section9 .container i{
     transform: rotate(0deg);
     transition: 0.2s;
+    cursor: pointer;
 }
 
 section.section9 .hidden .container i{

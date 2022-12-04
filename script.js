@@ -16,9 +16,11 @@ const CheckBox = () =>{
 CheckBox()
 
 const GetDate = () =>{
+    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    
     const d = new Date();
     const day = d.getDate()
-    const month = d.getMonth()
+    const month = months[d.getMonth()]
     const daysElements = document.querySelector('.section7 .container .days-box').getElementsByClassName('day');
     daysElements[day-1].classList.add("today")
 
