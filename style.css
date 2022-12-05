@@ -10,6 +10,23 @@ a{
     text-decoration: none;
 }
 
+::-webkit-scrollbar{
+    width: 8px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+   
+::-webkit-scrollbar-thumb {
+    background: #151a4a42;
+    border-radius: 50px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
 body{
     font-family: 'Inter', sans-serif;
     box-sizing: border-box;
@@ -511,13 +528,16 @@ section.section8 .container{
 }
 
 section.section8>div.second{
-    transform: translate(300px,-200px);
+    transform: translate(100px,-200px);
     transition: 0.3s;
+    position: absolute;
+    z-index: -1;
 }
 
 section.section8>div.second.active{
     transform: translate(0,-200px);
     transition: 0.3s;
+    z-index: 1;
 }
 
 section.section8>div.page{
@@ -677,6 +697,8 @@ section.section9 .content {
     margin-left: 25px;
     transition: 0.2s;
     transform: translateY(50px);
+    max-height: 150px;
+    overflow-y: scroll;
 }
 
 section.section9 .hidden .content {
@@ -686,16 +708,22 @@ section.section9 .hidden .content {
 }
 
 section.section9 .content ul{
-    list-style-type: none;   
+    list-style-type: none;
+    padding: 0 20px;  
 }
 
 section.section9 .content ul li{
-    padding: 2px 0px;
+    padding: 5px 0px;
     transition: 0.2s;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.296);
+}
+
+section.section9 .content ul li:last-child{
+    border-bottom: 0;
 }
 
 section.section9 .content ul li:hover{
     font-weight: bold;
-    padding: 2px 5px;
+    padding: 5px 5px;
     transition: 0.2s;
 }
